@@ -8,9 +8,39 @@
 
 import SwiftUI
 
+
+struct Card: Identifiable {
+    let id: Int
+    let iamgeName, header, subheader: String
+}
+
 struct ContentView: View {
+    
+    var cards: [Card] = [
+        Card(id: 0, iamgeName: "landscape", header: "Header", subheader: "Welcome to subheader"),
+        Card(id: 1, iamgeName: "landscape", header: "Header", subheader: "Welcome to subheader"),
+        Card(id: 2, iamgeName: "landscape", header: "Header", subheader: "Welcome to subheader"),
+        Card(id: 3, iamgeName: "landscape", header: "Header", subheader: "Welcome to subheader")
+        
+    ]
+    
+    
     var body: some View {
-        Text("Hello, World!")
+        
+        NavigationView{
+            ScrollView(.horizontal){
+                
+                HStack{
+                    ForEach(cards, id: \.id){
+                        card in
+                        CardView(cards: card)
+                    }
+                    
+                }.frame(height: 300)
+            }
+        }
+        
+        
     }
 }
 

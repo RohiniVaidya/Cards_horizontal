@@ -14,6 +14,7 @@
 		1876C5C62431CAA60054391B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1876C5C52431CAA60054391B /* Preview Assets.xcassets */; };
 		1876C5C92431CAA60054391B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1876C5C72431CAA60054391B /* LaunchScreen.storyboard */; };
 		1876C5D42431CAA60054391B /* CardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876C5D32431CAA60054391B /* CardsUITests.swift */; };
+		1876C5DF2431CBE10054391B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876C5DE2431CBE10054391B /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1876C5CF2431CAA60054391B /* CardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1876C5D32431CAA60054391B /* CardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsUITests.swift; sourceTree = "<group>"; };
 		1876C5D52431CAA60054391B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1876C5DE2431CBE10054391B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				1876C5BC2431CAA20054391B /* AppDelegate.swift */,
 				1876C5BE2431CAA20054391B /* SceneDelegate.swift */,
 				1876C5C02431CAA20054391B /* ContentView.swift */,
+				1876C5DE2431CBE10054391B /* CardView.swift */,
 				1876C5C22431CAA60054391B /* Assets.xcassets */,
 				1876C5C72431CAA60054391B /* LaunchScreen.storyboard */,
 				1876C5CA2431CAA60054391B /* Info.plist */,
@@ -210,6 +213,7 @@
 			files = (
 				1876C5BD2431CAA20054391B /* AppDelegate.swift in Sources */,
 				1876C5BF2431CAA20054391B /* SceneDelegate.swift in Sources */,
+				1876C5DF2431CBE10054391B /* CardView.swift in Sources */,
 				1876C5C12431CAA20054391B /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
