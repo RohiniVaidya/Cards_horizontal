@@ -31,9 +31,15 @@ struct ContentView: View {
             ScrollView(.horizontal){
                 
                 HStack{
+                    
                     ForEach(cards, id: \.id){
                         card in
-                        CardView(cards: card)
+                        NavigationLink(destination: DetialView()){
+                            
+                            CardView(cards: card)
+
+                        }
+
                     }
                     
                 }.frame(height: 300)
@@ -47,5 +53,12 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct DetialView: View {
+    var body: some View {
+        
+        Text("Detail View")
     }
 }

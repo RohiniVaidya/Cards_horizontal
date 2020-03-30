@@ -17,6 +17,7 @@ struct CardView: View {
             HStack(alignment: .center, spacing: 10) {
                     VStack {
                             Image(cards.iamgeName)
+                                .renderingMode(.original)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
 
