@@ -9,18 +9,14 @@
 import SwiftUI
 
 
-struct Card: Identifiable {
-    let id: Int
-    let iamgeName, header, subheader: String
-}
 
 struct ContentView: View {
     
     var cards: [Card] = [
-        Card(id: 0, iamgeName: "landscape", header: "Header", subheader: "Welcome to subheader"),
-        Card(id: 1, iamgeName: "landscape", header: "Header", subheader: "Welcome to subheader"),
-        Card(id: 2, iamgeName: "landscape", header: "Header", subheader: "Welcome to subheader"),
-        Card(id: 3, iamgeName: "landscape", header: "Header", subheader: "Welcome to subheader")
+        Card(id: 0, iamgeName: "workout", header: "Monday", subheader: "Choose your workout"),
+        Card(id: 1, iamgeName: "workout", header: "Tuesady", subheader: "Choose your workout"),
+        Card(id: 2, iamgeName: "workout", header: "Wednesday", subheader: "Choose your workout"),
+        Card(id: 3, iamgeName: "workout", header: "Thursday", subheader: "Choose your workout")
         
     ]
     
@@ -28,22 +24,39 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView{
-            ScrollView(.horizontal){
-                
-                HStack{
-                    
-                    ForEach(cards, id: \.id){
-                        card in
-                        NavigationLink(destination: DetialView()){
-                            
-                            CardView(cards: card)
+                VStack(alignment: .leading, spacing: 8){
+                    Text("Training Club")
+                        .font(.largeTitle)
+                        .fontWeight(.black)
+                        .foregroundColor(Color.black)
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading)
+                    Text("High quality training is the most important tool you have to make your company successful. We are dedicated to providing you the best training available in the industry.")
+                        .font(.body)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.gray)
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(nil)
+                        .frame(width: 300.0).padding(.leading)
+                    ScrollView(.horizontal){
+
+                    HStack{
+                        
+                        ForEach(cards, id: \.id){
+                            card in
+                            NavigationLink(destination: TasksListView()){
+                                
+                                CardView(cards: card)
+
+                            }
 
                         }
-
+                        
+                    }.frame(height: 300)
                     }
-                    
-                }.frame(height: 300)
-            }
+
+                }
+                
         }
         
         
@@ -56,9 +69,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct DetialView: View {
-    var body: some View {
-        
-        Text("Detail View")
-    }
-}
+

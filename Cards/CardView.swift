@@ -8,6 +8,13 @@
 
 import SwiftUI
 
+
+struct Card: Identifiable {
+    let id: Int
+    let iamgeName, header, subheader: String
+}
+
+
 struct CardView: View {
     
     var cards: Card
@@ -19,7 +26,7 @@ struct CardView: View {
                             Image(cards.iamgeName)
                                 .renderingMode(.original)
                                 .resizable()
-                                .aspectRatio(contentMode: .fill)
+                                .aspectRatio(contentMode: .fit)
 
                     HStack {
                         VStack(alignment: .leading) {
@@ -29,12 +36,8 @@ struct CardView: View {
                             Text(cards.subheader)
                                 .fontWeight(.black)
                                 .foregroundColor(.primary)
-                            Text("Written".uppercased())
-                                .font(.caption)
-                                .foregroundColor(.secondary)
+                            
                         }
-                        .layoutPriority(100)
-
                         Spacer()
                     }
                     .padding()
