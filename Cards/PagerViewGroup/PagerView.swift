@@ -12,14 +12,6 @@ struct PagerView: View {
     
     @State private var index: Int = 0
     var exercises: [Exercises]
-
-//    var pages:[PageData] = [
-//        PageData(id: 0, imageName: "hiit", title: "Excercise 1", isLastPage: false),
-//        PageData(id: 1, imageName: "hiit", title: "Excercise 2", isLastPage: false),
-//        PageData(id: 2, imageName: "hiit", title: "Excercise 3", isLastPage: false),
-//        PageData(id: 3, imageName: "hiit", title: "Excercise 4", isLastPage: true)
-//
-//    ]
     
     var body: some View {
         

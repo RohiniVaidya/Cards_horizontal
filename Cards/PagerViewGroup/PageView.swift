@@ -44,31 +44,12 @@ struct PageView: View {
                     .stroke(Color(.sRGB, red: 130/255, green: 130/255, blue: 150/255, opacity: 0.4), lineWidth: 2)
                     .padding([.bottom])
             )
-            
-//            if self.pageData.isLastPage{
-//
-//                Button(action: {                        self.mode.wrappedValue.dismiss()
-//                }, label:{
-//                    Text("Done")
-//                }
-//                )
-//
-//            }
         
     }
 }
 
 struct PageView_Previews: PreviewProvider {
     static var previews: some View {
-        PageView(pageData: Exercises(id: 0, name: "layaExercises ", description: "layaExercises and semantics for the there", repititions: 23))
+        PageView(pageData: Exercises(id: 0, name: "layaExercises ", description: "layaExercises", repititions: 23))
     }
-}
-
-
-struct PageData:Identifiable{
-    
-    var id: Int
-    var imageName, title: String
-    var isLastPage: Bool
-
 }

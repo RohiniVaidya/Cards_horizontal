@@ -12,6 +12,7 @@
 		1812E7F224336C47007CAC33 /* CircularButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812E7F124336C47007CAC33 /* CircularButtons.swift */; };
 		1812E7F424336DFE007CAC33 /* SwipableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812E7F324336DFE007CAC33 /* SwipableView.swift */; };
 		1812E7F624337562007CAC33 /* PagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812E7F524337562007CAC33 /* PagerView.swift */; };
+		1814DAFE2437000900903C3E /* JSONDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814DAFD2437000900903C3E /* JSONDataModel.swift */; };
 		182E1CEA243601FF002F5E02 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 182E1CE9243601FF002F5E02 /* data.json */; };
 		182E1CEC2436088D002F5E02 /* ReadJSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E1CEB2436088D002F5E02 /* ReadJSONFile.swift */; };
 		1876C5BD2431CAA20054391B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1876C5BC2431CAA20054391B /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		1812E7F124336C47007CAC33 /* CircularButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButtons.swift; sourceTree = "<group>"; };
 		1812E7F324336DFE007CAC33 /* SwipableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableView.swift; sourceTree = "<group>"; };
 		1812E7F524337562007CAC33 /* PagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerView.swift; sourceTree = "<group>"; };
+		1814DAFD2437000900903C3E /* JSONDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataModel.swift; sourceTree = "<group>"; };
 		182E1CE9243601FF002F5E02 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		182E1CEB2436088D002F5E02 /* ReadJSONFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadJSONFile.swift; sourceTree = "<group>"; };
 		1876C5B92431CAA20054391B /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,14 +76,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1812E7EE243369E2007CAC33 /* PagierViewGroup */ = {
+		1812E7EE243369E2007CAC33 /* PagerViewGroup */ = {
 			isa = PBXGroup;
 			children = (
+				1812E7F524337562007CAC33 /* PagerView.swift */,
 				1812E7EF243369F7007CAC33 /* PageView.swift */,
 				1812E7F124336C47007CAC33 /* CircularButtons.swift */,
 				1812E7F324336DFE007CAC33 /* SwipableView.swift */,
 			);
-			path = PagierViewGroup;
+			path = PagerViewGroup;
+			sourceTree = "<group>";
+		};
+		1814DAFF2437010100903C3E /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				182E1CEB2436088D002F5E02 /* ReadJSONFile.swift */,
+				1814DAFD2437000900903C3E /* JSONDataModel.swift */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		1876C5B02431CAA10054391B = {
@@ -110,14 +122,13 @@
 				1876C5BE2431CAA20054391B /* SceneDelegate.swift */,
 				1876C5C02431CAA20054391B /* ContentView.swift */,
 				1876C5DE2431CBE10054391B /* CardView.swift */,
-				1812E7EC243365B4007CAC33 /* TasksListView.swift */,
-				1812E7F524337562007CAC33 /* PagerView.swift */,
-				1812E7EE243369E2007CAC33 /* PagierViewGroup */,
+				1814DAFF2437010100903C3E /* JSON */,
+				1812E7EE243369E2007CAC33 /* PagerViewGroup */,
 				1876C5C22431CAA60054391B /* Assets.xcassets */,
 				1876C5C72431CAA60054391B /* LaunchScreen.storyboard */,
 				1876C5CA2431CAA60054391B /* Info.plist */,
+				1812E7EC243365B4007CAC33 /* TasksListView.swift */,
 				1876C5C42431CAA60054391B /* Preview Content */,
-				182E1CEB2436088D002F5E02 /* ReadJSONFile.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -243,6 +254,7 @@
 			files = (
 				1876C5BD2431CAA20054391B /* AppDelegate.swift in Sources */,
 				1812E7F0243369F7007CAC33 /* PageView.swift in Sources */,
+				1814DAFE2437000900903C3E /* JSONDataModel.swift in Sources */,
 				1812E7ED243365B4007CAC33 /* TasksListView.swift in Sources */,
 				1876C5BF2431CAA20054391B /* SceneDelegate.swift in Sources */,
 				1876C5DF2431CBE10054391B /* CardView.swift in Sources */,

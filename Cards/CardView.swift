@@ -8,13 +8,6 @@
 
 import SwiftUI
 
-
-struct Card: Identifiable {
-    let id: Int
-    var title: String
-}
-
-
 struct CardView: View {
     
     var day: Days

@@ -41,16 +41,4 @@ class DaysViewModel: ObservableObject {
 }
 
 
-struct Days: Decodable {
-    var id: Int
-    var title: String
-    var exercises: [Exercises]
-}
 
-
-struct Exercises: Decodable, Identifiable {
-    var id: Int
-    var name:String
-    var description: String
-    var repititions: Int
-}

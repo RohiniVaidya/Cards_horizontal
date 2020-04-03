@@ -23,16 +23,16 @@ struct SwipableView: View {
                     
                     ForEach(self.pages){ page in
                         PageView(pageData: page)
-                        .frame(width: geometry.size.width,
-                        height: geometry.size.height)
+                            .frame(width: geometry.size.width,
+                                   height: geometry.size.height)
                     }
                     
                 }
                 
             }
-        .content
+            .content
             .offset(x: self.isUserSwiping ? self.offset : CGFloat(self.index) * -geometry.size.width)
-        .frame(width: geometry.size.width, alignment: .leading)
+            .frame(width: geometry.size.width, alignment: .leading)
             .gesture(
                 DragGesture()
                     .onChanged({ value in
@@ -53,7 +53,7 @@ struct SwipableView: View {
             )
             
         }
-    
+        
         
         
     }

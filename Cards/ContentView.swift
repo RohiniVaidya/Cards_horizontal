@@ -12,33 +12,8 @@ import Combine
 
 struct ContentView: View {
     
-    //    var cards: [Card] = [
-    //        Card(id: 0, iamgeName: "workout", header: "Monday", subheader: "Choose your workout"),
-    //        Card(id: 1, iamgeName: "workout", header: "Tuesady", subheader: "Choose your workout"),
-    //        Card(id: 2, iamgeName: "workout", header: "Wednesday", subheader: "Choose your workout"),
-    //        Card(id: 3, iamgeName: "workout", header: "Thursday", subheader: "Choose your workout")
-    //
-    //    ]
-    
     @ObservedObject var jsonList = DaysViewModel()
-    
-    //
-    //    var body: some View{
-    //
-    //        NavigationView{
-    //            List(jsonList.daysList, id: \.id){ day in
-    //
-    //                NavigationLink(destination: TasksListView(exercises: day.exercises)) {
-    //                        Text(day.title)
-    //                }
-    //            }
-    //        }
-    ////        List(jsonList.responseModel){ object in
-    //
-    ////        }
-    //
-    //    }
-    
+        
     var body: some View {
         
         NavigationView {
