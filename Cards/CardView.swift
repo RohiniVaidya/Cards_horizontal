@@ -11,47 +11,52 @@ import SwiftUI
 
 struct Card: Identifiable {
     let id: Int
-    let iamgeName, header, subheader: String
+    var title: String
 }
 
 
 struct CardView: View {
     
-    var cards: Card
+    var day: Days
     var body: some View {
         
         ScrollView(.horizontal, content: {
             HStack(alignment: .center, spacing: 10) {
-                    VStack {
-                            Image(cards.iamgeName)
-                                .renderingMode(.original)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-
+                VStack {
+                    
+                    Image("music").renderingMode(.original).resizable().clipped().frame(height: 200)
+                        .aspectRatio(contentMode: .fit).padding()
                     HStack {
                         VStack(alignment: .leading) {
-                            Text(cards.header)
-                                .font(.headline)
+                            Text(day.title)
+                                .font(.headline).fontWeight(.heavy)
+                                    .foregroundColor(.primary)
+                            Text("Get Started")
+                                .fontWeight(.medium)
                                 .foregroundColor(.secondary)
-                            Text(cards.subheader)
-                                .fontWeight(.black)
-                                .foregroundColor(.primary)
                             
                         }
                         Spacer()
                     }
                     .padding()
-                }
+                    }.frame(width: 300, height: 300)
                 .cornerRadius(10)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
+                        .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 2)
                 )
-                .padding([.top, .horizontal])
+                    .padding()
+                    .border(/*@START_MENU_TOKEN@*/Color.green/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)
             }
         })
-
-    
+        
+        
     }
 }
 
+struct CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        CardView(day: Days(id: 0, title: "Day 1", exercises: [Exercises(id: 0, name: "", description: "", repititions: 0)]))
+        
+    }
+}

@@ -10,38 +10,57 @@ import SwiftUI
 
 struct PageView: View {
     
-    var pageData: PageData
+    var pageData: Exercises
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
 
     
     var body: some View {
         
-        VStack{
-            ZStack{
-                Image(pageData.imageName).resizable().clipped()
-                .aspectRatio(contentMode: .fit)
-
-                Text(pageData.title).font(.headline).fontWeight(.bold).padding()
-            }
-            
-            if self.pageData.isLastPage{
-                
-                Button(action: {                        self.mode.wrappedValue.dismiss()
-                }, label:{
-                    Text("Done")
+            VStack{
+                ZStack{
+                    Circle()
+                        .frame(width: 100.0, height: 100.0)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.565, saturation: 0.503, brightness: 0.938)/*@END_MENU_TOKEN@*/)
+                    Text(String(pageData.repititions))
                 }
-                )
+                VStack{
+                    Text(pageData.name)
+                        .font(.headline).fontWeight(.bold)
+                        .lineLimit(nil).padding()
+                    
+                    Text(pageData.description)
+
+                        .lineLimit(nil)
+                        .foregroundColor(.gray)
+                }.frame(width: 300, height: 200)
+                .multilineTextAlignment(.center)
                 
             }
-        }
+            .frame(width: 300, height: 600)
+            .cornerRadius(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color(.sRGB, red: 130/255, green: 130/255, blue: 150/255, opacity: 0.4), lineWidth: 2)
+                    .padding([.bottom])
+            )
+            
+//            if self.pageData.isLastPage{
+//
+//                Button(action: {                        self.mode.wrappedValue.dismiss()
+//                }, label:{
+//                    Text("Done")
+//                }
+//                )
+//
+//            }
         
     }
 }
 
 struct PageView_Previews: PreviewProvider {
     static var previews: some View {
-        PageView(pageData: PageData(id: 0, imageName: "hiit", title: "Some", isLastPage: true))
+        PageView(pageData: Exercises(id: 0, name: "layaExercises ", description: "layaExercises and semantics for the there", repititions: 23))
     }
 }
 

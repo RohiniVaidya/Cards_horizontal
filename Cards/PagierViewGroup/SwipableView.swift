@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SwipableView: View {
     
-    var pages: [PageData]
+    var pages: [Exercises]
     
     @Binding var index: Int
     @State var isUserSwiping = false

@@ -21,7 +21,7 @@ struct CircularButtons: View {
         }, label: {
             Circle()
                 .frame(width: 20.0, height: 10.0)
-                .accentColor(isSelected ? .gray : .black)
+                .accentColor(isSelected ? .black : .gray)
         })
 
     }

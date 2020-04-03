@@ -10,35 +10,35 @@ import SwiftUI
 
 struct TasksListView: View {
     
-    var tasks: [Task] = [
-        Task(id: 0, title: "Task 1", description: "Get fit with 185+ free workouts from strength and endurance to mobility and yoga—featuring our world-class drill"),
-        Task(id: 1, title: "Task 2", description: "Get fit with 185+ free workouts from strength and endurance to mobility and yoga—featuring our world-class drill"),
-        Task(id: 2, title: "Task 3", description: "Get fit with 185+ free workouts from strength and endurance to mobility and yoga—featuring our world-class drill"),
-        Task(id: 3, title: "Task 4", description: "Get fit with 185+ free workouts from strength and endurance to mobility and yoga—featuring our world-class drill"),
-        Task(id: 4, title: "Task 5", description: "Get fit with 185+ free workouts from strength and endurance to mobility and yoga—featuring our world-class drill")
-    ]
-    
+//    var tasks: [Task] = [
+//        Task(id: 0, title: "Task 1", description: "Get fit with 185+ free workouts from strength and endurance to mobility and yoga—featuring our world-class drill"),
+//        Task(id: 1, title: "Task 2", description: "Get fit with 185+ free workouts from strength and endurance to mobility and yoga—featuring our world-class drill"),
+//        Task(id: 2, title: "Task 3", description: "Get fit with 185+ free workouts from strength and endurance to mobility and yoga—featuring our world-class drill"),
+//        Task(id: 3, title: "Task 4", description: "Get fit with 185+ free workouts from strength and endurance to mobility and yoga—featuring our world-class drill"),
+//        Task(id: 4, title: "Task 5", description: "Get fit with 185+ free workouts from strength and endurance to mobility and yoga—featuring our world-class drill")
+//    ]
+//
+    var exercises: [Exercises]
     
     var body: some View {
-        
-        List(tasks){ task in
-            NavigationLink(destination: PagerView())
-            {
+        List(exercises){ task in
+//            NavigationLink(destination: PagerView())
+//            {
                 VStack(alignment: .leading){
                    
-                    TaskView(title: task.title, description: task.description)
+                   return TaskView(title: task.name, description: task.description)
                 }
-            }
+//            }
             
         }
     }
 }
 
-struct TasksListView_Previews: PreviewProvider {
-    static var previews: some View {
-        TasksListView()
-    }
-}
+//struct TasksListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TasksListView(dayData: Days(id: <#T##Int#>, title: <#T##String#>, exercises: <#T##[Exercises]#>))
+//    }
+//}
 
 struct TaskView: View{
     
@@ -67,7 +67,7 @@ struct TaskView: View{
 
 struct Task: Identifiable
 {
-    var id: Int
-    var title, description: String
+    var id, repititions: Int
+    var name, description: String
     
 }

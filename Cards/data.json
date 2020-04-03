@@ -1,0 +1,63 @@
+[
+    {
+        "id": 0,
+        "title":"Day 1",
+        "exercises":[
+            {
+                "id": 0,
+                "name":"speedExercise",
+                "description":"Sarale varases at 80 bpm (only svara)",
+                "repititions":15
+            },
+            {
+                "id": 1,
+                "name":"layaExercise",
+                "description":"Chaturashra Jati Dhruva tala in 3rd speed with 2 akshara edupu",
+                "repititions":5
+            },
+            {
+                "id": 2,
+                "name":"svaraExercise1",
+                "description":"Sarale varase-s in Mayamalavagaula",
+                "repititions":6
+            },
+            {
+                "id": 3,
+                "name":"svaraExercise2",
+                "description":"Janti in Mayamalavagaula",
+                "repititions":10
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "title":"Day 2",
+        "exercises":[
+            {
+                "id": 0,
+                "name":"speedExercise",
+                "description":"Sarale varases at 80 bpm (only svara)",
+                "repititions":15
+            },
+            {
+                "id": 1,
+                "name":"layaExercise",
+                "description":"Chaturashra Jati Dhruva tala in 3rd speed with 2 akshara edupu",
+                "repititions":5
+            },
+            {
+                "id": 2,
+                "name":"svaraExercise1",
+                "description":"Sarale varase-s in Mayamalavagaula",
+                "repititions":6
+            },
+            {
+                "id": 3,
+                "name":"svaraExercise2",
+                "description":"Janti in Mayamalavagaula",
+                "repititions":10
+            }
+        ]
+    }
+    
+]
